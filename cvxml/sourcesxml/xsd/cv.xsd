@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+ Description : schema XML pour la validation d'un CV
+ Auteur : David ROUSSE, d.rousse@wanadoo.fr
+ Date derniere modification : 01/02/2003
+-->
+<xs:schema targetNamespace="http://perso.wanadoo.fr/david.rousse/" xmlns="http://perso.wanadoo.fr/david.rousse/" xmlns:drc="http://perso.wanadoo.fr/david.rousse/copyright/" xmlns:dr="http://perso.wanadoo.fr/david.rousse/" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<!-- Definition annotation (a titre informatif) -->
+	<xs:annotation>
+		<xs:documentation xml:lang="fr">
+  Schéma XML pour la validation d'un CV, réalisé par David ROUSSE, d.rousse@wanadoo.fr.
+ </xs:documentation>
+	</xs:annotation>
+	<!-- Importation d'un schema externe -->
+	<xs:import namespace="http://perso.wanadoo.fr/david.rousse/copyright/" schemaLocation="dr_copyright.xsd"/>
+	<!-- Definition type de donnees personnalise -->
+	<xs:simpleType name="showType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="new"/>
+			<xs:enumeration value="replace"/>
+			<xs:enumeration value="embed"/>
+			<xs:enumeration value="other"/>
+			<xs:enumeration value="none"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- Definition element racine -->
+	<xs:element name="cv">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="dr:informations_cv" minOccurs="0"/>
+				<xs:element ref="dr:etatcivil"/>
+				<xs:element ref="dr:experiences_professionnelles"/>
+				<xs:element ref="dr:formations"/>
+				<xs:element ref="dr:connaissances"/>
+				<xs:element ref="dr:divers"/>
+				<xs:element ref="dr:informations_cv" minOccurs="0"/>
+				<xs:element ref="dr:copyright"/>
+			</xs:sequence>
+			<xs:attribute name="langue" type="xs:language" use="required"/>
+			<xs:attribute name="date_creation" type="xs:string" use="required"/>
+			<xs:attribute name="date_mise_a_jour" type="xs:string" use="required"/>
+			<xs:attribute name="titre" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<!-- Definition elements niveau (racine-1) -->
+	<xs:element name="informations_cv">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="dr:information" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="etatcivil">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="dr:titre"/>
+				<xs:element ref="dr:prenom"/>
+				<xs:element ref="dr:nom"/>
+				<xs:element ref="dr:adresse"/>
+				<xs:element ref="dr:telephone"/>
+				<xs:element ref="dr:email"/>
+				<xs:element ref="dr:age"/>
+				<xs:element ref="dr:etat_marital"/>
+				<xs:element ref="dr:photo_identite" minOccurs="0"/>
+				<xs:element ref="dr:information" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="formations">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="dr:titre"/>
+				<xs:element ref="dr:formation" maxOccurs="unbounded"/>
+				<xs:element ref="dr:information" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="connaissances">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="dr:titre"/>
+				<xs:element ref="dr:connaissance" maxOccurs="unbounded"/>
+				<xs:element ref="dr:information" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="experiences_professionnelles">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="dr:titre"/>
+				<xs:element ref="dr:experience_professionnelle" maxOccurs="unbounded"/>
+				<xs:element ref="dr:information" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="divers">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="dr:titre"/>
+				<xs:element ref="dr:langues"/>
+				<xs:element ref="dr:loisirs" minOccurs="0"/>
+				<xs:element ref="dr:particularites" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="copyright">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="drc:dr_copyright"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- Definition elements niveau (racine-2) -->
+	<xs:element name="formation">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="dr:date_debut"/>
+				<xs:element ref="dr:date_fin" minOccurs="0"/>
+				<xs:element ref="dr:description"/>
+				<xs:element ref="dr:organisme"/>
+				<xs:element ref="dr:ville"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="experience_professionnelle">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="dr:date_debut"/>
+				<xs:element ref="dr:date_fin" minOccurs="0"/>
+				<xs:element ref="dr:description"/>
+				<xs:element ref="dr:organisme"/>
+				<xs:element ref="dr:ville"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="connaissance">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="dr:domaine"/>
+				<xs:element ref="dr:matiere" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="langues">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="dr:langue" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- Definition elements niveau (racine-3) -->
+	<xs:element name="langue">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="dr:nom_langue"/>
+				<xs:element ref="dr:niveau_langue"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="loisirs">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="dr:loisir" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="particularites">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="dr:particularite" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="adresse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="dr:numero"/>
+				<xs:element ref="dr:rue"/>
+				<xs:element ref="dr:code_postal"/>
+				<xs:element ref="dr:ville"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- Definition elements niveau (racine-4) -->
+	<xs:element name="titre" type="xs:string"/>
+	<xs:element name="prenom" type="xs:string"/>
+	<xs:element name="nom" type="xs:string"/>
+	<xs:element name="numero" type="xs:string"/>
+	<xs:element name="rue" type="xs:string"/>
+	<xs:element name="code_postal" type="xs:string"/>
+	<xs:element name="ville" type="xs:string"/>
+	<xs:element name="telephone" type="xs:string"/>
+	<xs:element name="age" type="xs:string"/>
+	<xs:element name="etat_marital" type="xs:string"/>
+	<xs:element name="date_debut" type="xs:string"/>
+	<xs:element name="date_fin" type="xs:string"/>
+	<xs:element name="description" type="xs:string"/>
+	<xs:element name="organisme" type="xs:string"/>
+	<xs:element name="domaine" type="xs:string"/>
+	<xs:element name="matiere" type="xs:string"/>
+	<xs:element name="nom_langue" type="xs:string"/>
+	<xs:element name="niveau_langue" type="xs:string"/>
+	<xs:element name="loisir" type="xs:string"/>
+	<xs:element name="particularite" type="xs:string"/>
+	<!-- Definition elements non vide avec attributs seuleument -->
+	<xs:element name="information">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute name="show" type="showType"/>
+					<xs:attribute name="type" type="xs:string" default="simple"/>
+					<xs:attribute name="title" type="xs:string" use="required"/>
+					<xs:attribute name="href" type="xs:string"/>
+					<xs:attribute name="image" type="xs:string"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="email">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute name="show" type="showType"/>
+					<xs:attribute name="type" type="xs:string" fixed="simple"/>
+					<xs:attribute name="title" type="xs:string" use="required"/>
+					<xs:attribute name="href" type="xs:string" use="required"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<!-- Definition elements vide avec attributs seuleument -->
+	<xs:element name="photo_identite">
+		<xs:complexType>
+			<xs:attribute name="image" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

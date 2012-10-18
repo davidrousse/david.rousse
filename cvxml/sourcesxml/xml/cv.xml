@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- edited with XMLSPY v5 rel. 3 U (http://www.xmlspy.com) by King (MIAGe) -->
+<dr:cv xmlns:dr="http://perso.wanadoo.fr/david.rousse/" xmlns:drc="http://perso.wanadoo.fr/david.rousse/copyright/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://perso.wanadoo.fr/david.rousse/ 
+                        ../xsd/cv.xsd" langue="fr-CA" date_creation="12/02/2003" date_mise_a_jour="10/01/2004" titre="CV de David ROUSSE">
+	<dr:informations_cv>
+		<dr:information title="Page d'accueil du site de David ROUSSE" show="replace" type="simple" href="http://perso.wanadoo.fr/david.rousse/" image="sourcesxml/img/home.gif">
+   Accueil
+  </dr:information>
+		<dr:information title="Téléchargement du CV au format PDF" show="replace" type="simple" href="cv.pdf" image="sourcesxml/img/download.gif">
+   Télécharger le CV
+  </dr:information>
+	</dr:informations_cv>
+	<dr:etatcivil>
+		<dr:titre>Ingénieur d&apos;études au CNRS, Titulaire d&apos;un DESS MIAGe (Méthodes Informatiques Appliquées à la Gestion d&apos;Entreprise)</dr:titre>
+		<dr:prenom>David</dr:prenom>
+		<dr:nom>ROUSSE</dr:nom>
+		<dr:adresse>
+			<dr:numero>9</dr:numero>
+			<dr:rue>chemin de Nabias</dr:rue>
+			<dr:code_postal>65200</dr:code_postal>
+			<dr:ville>ASTE</dr:ville>
+		</dr:adresse>
+		<dr:telephone>06.07.59.25.15</dr:telephone>
+		<dr:email title="E-mail de David ROUSSE" show="new" type="simple" href="mailto:d.rousse@wanadoo.fr">
+   d.rousse@wanadoo.fr
+  </dr:email>
+		<dr:age>26 ans</dr:age>
+		<dr:etat_marital>Célibataire</dr:etat_marital>
+		<dr:photo_identite image="sourcesxml/img/me.jpg"/>
+		<dr:information title="David ROUSSE's resume" show="new" type="simple" href="http://perso.wanadoo.fr/david.rousse/resume.html" image="sourcesxml/img/uk.gif">English version</dr:information>
+	</dr:etatcivil>
+	<dr:experiences_professionnelles>
+		<dr:titre>Expériences professionnelles</dr:titre>
+		<dr:experience_professionnelle>
+			<dr:date_debut>Sept. 2002</dr:date_debut>
+			<dr:description>Ingénieur d&apos;études, Direction des Systèmes d&apos;Information</dr:description>
+			<dr:organisme>CNRS</dr:organisme>
+			<dr:ville>Toulouse</dr:ville>
+		</dr:experience_professionnelle>
+		<dr:experience_professionnelle>
+			<dr:date_debut>Février 2002</dr:date_debut>
+			<dr:date_fin>Juin 2002</dr:date_fin>
+			<dr:description>Conception et mise en oeuvre sous SAP BW d&apos;un datawarehouse, avec SAP R/3 comme système source</dr:description>
+			<dr:organisme>Airbus France</dr:organisme>
+			<dr:ville>Toulouse</dr:ville>
+		</dr:experience_professionnelle>
+		<dr:experience_professionnelle>
+			<dr:date_debut>Nov. 2001</dr:date_debut>
+			<dr:date_fin>Déc. 2001</dr:date_fin>
+			<dr:description>Panorama des technologies des réseaux sans fil (WPAN, WLAN, BLR, satellites, mobiles)</dr:description>
+			<dr:organisme>IRIT</dr:organisme>
+			<dr:ville>Toulouse</dr:ville>
+		</dr:experience_professionnelle>
+		<dr:experience_professionnelle>
+			<dr:date_debut>Mai 2001</dr:date_debut>
+			<dr:date_fin>Juin 2001</dr:date_fin>
+			<dr:description>Modéliser une partie d&apos;un système d&apos;information avec UML et CORBA</dr:description>
+			<dr:organisme>Société B&amp;T Associés</dr:organisme>
+			<dr:ville>Toulouse</dr:ville>
+		</dr:experience_professionnelle>
+		<dr:experience_professionnelle>
+			<dr:date_debut>Juin 2000</dr:date_debut>
+			<dr:date_fin>Déc. 2000</dr:date_fin>
+			<dr:description>Analyste - programmeur dans l&apos;architecture COM+, sur un progiciel de gestion de billetterie</dr:description>
+			<dr:organisme>SSII CIMA</dr:organisme>
+			<dr:ville>Pau</dr:ville>
+		</dr:experience_professionnelle>
+		<dr:experience_professionnelle>
+			<dr:date_debut>Fév. 1999</dr:date_debut>
+			<dr:date_fin>Mars 1999</dr:date_fin>
+			<dr:description>Développement d&apos;un logiciel de paramétrage de coffret électrique par liaison série en Visual Basic</dr:description>
+			<dr:organisme>SOULÉ</dr:organisme>
+			<dr:ville>Bagnères de Bigorre</dr:ville>
+		</dr:experience_professionnelle>
+		<dr:experience_professionnelle>
+			<dr:date_debut>Juin 1998</dr:date_debut>
+			<dr:date_fin>Juin 1998</dr:date_fin>
+			<dr:description>Création d&apos;un site Web, avec l&apos;écriture des pages HTML, des applets JAVA, d&apos;un script CGI</dr:description>
+			<dr:organisme>SSII INFORADOUR - ADIX</dr:organisme>
+			<dr:ville>Tarbes</dr:ville>
+		</dr:experience_professionnelle>
+		<dr:information title="Rapports de stage de David ROUSSE" show="new" type="simple" href="http://perso.wanadoo.fr/david.rousse/download_stages.html" image="sourcesxml/img/download.gif">Télécharger mes rapports de stage</dr:information>
+	</dr:experiences_professionnelles>
+	<dr:formations>
+		<dr:titre>Formation</dr:titre>
+		<dr:formation>
+			<dr:date_debut>2001</dr:date_debut>
+			<dr:date_fin>2002</dr:date_fin>
+			<dr:description>DESS MIAGe, Mention Très Bien</dr:description>
+			<dr:organisme>Université Paul Sabatier et Université des Sciences Sociales</dr:organisme>
+			<dr:ville>Toulouse</dr:ville>
+		</dr:formation>
+		<dr:formation>
+			<dr:date_debut>2000</dr:date_debut>
+			<dr:date_fin>2001</dr:date_fin>
+			<dr:description>Titre d&apos;ingénieur - maître, Mention Très Bien</dr:description>
+			<dr:organisme>Université Paul Sabatier et Université des Sciences Sociales</dr:organisme>
+			<dr:ville>Toulouse</dr:ville>
+		</dr:formation>
+		<dr:formation>
+			<dr:date_debut>2000</dr:date_debut>
+			<dr:date_fin>2001</dr:date_fin>
+			<dr:description>Maîtrise MIAGe, Mention Bien</dr:description>
+			<dr:organisme>Université Paul Sabatier et Université des Sciences Sociales</dr:organisme>
+			<dr:ville>Toulouse</dr:ville>
+		</dr:formation>
+		<dr:formation>
+			<dr:date_debut>1999</dr:date_debut>
+			<dr:date_fin>2000</dr:date_fin>
+			<dr:description>Licence MIAGe, Mention Très Bien</dr:description>
+			<dr:organisme>Université Paul Sabatier et Université des Sciences Sociales</dr:organisme>
+			<dr:ville>Toulouse</dr:ville>
+		</dr:formation>
+		<dr:formation>
+			<dr:date_debut>1997</dr:date_debut>
+			<dr:date_fin>1999</dr:date_fin>
+			<dr:description>B.T.S. Informatique de Gestion, Major académique</dr:description>
+			<dr:organisme>Lycée Saint John Perse</dr:organisme>
+			<dr:ville>Pau</dr:ville>
+		</dr:formation>
+		<dr:formation>
+			<dr:date_debut>1995</dr:date_debut>
+			<dr:date_fin>1997</dr:date_fin>
+			<dr:description>Mathématiques - Supérieures, Enseignement par correspondance</dr:description>
+			<dr:organisme>C.N.E.D.</dr:organisme>
+			<dr:ville>Tarbes</dr:ville>
+		</dr:formation>
+		<dr:formation>
+			<dr:date_debut>1994</dr:date_debut>
+			<dr:date_fin>1995</dr:date_fin>
+			<dr:description>Baccalauréat série S, Mention Assez Bien</dr:description>
+			<dr:organisme>Lycée Victor - Duruy</dr:organisme>
+			<dr:ville>Bagnères de Bigorre</dr:ville>
+		</dr:formation>
+	</dr:formations>
+	<dr:connaissances>
+		<dr:titre>Connaissances</dr:titre>
+		<dr:connaissance>
+			<dr:domaine>Analyse et conception</dr:domaine>
+			<dr:matiere>Méthode MERISE</dr:matiere>
+			<dr:matiere>Langage de modélisation UML</dr:matiere>
+		</dr:connaissance>
+		<dr:connaissance>
+			<dr:domaine>Architectures réparties</dr:domaine>
+			<dr:matiere>SOAP</dr:matiere>
+			<dr:matiere>CORBA</dr:matiere>
+			<dr:matiere>RMI</dr:matiere>
+			<dr:matiere>COM+</dr:matiere>
+		</dr:connaissance>
+		<dr:connaissance>
+			<dr:domaine>Base de données</dr:domaine>
+			<dr:matiere>Oracle</dr:matiere>
+			<dr:matiere>SQL Server</dr:matiere>
+			<dr:matiere>relationnel</dr:matiere>
+			<dr:matiere>répartie</dr:matiere>
+			<dr:matiere>objet</dr:matiere>
+		</dr:connaissance>
+		<dr:connaissance>
+			<dr:domaine>Programmation</dr:domaine>
+			<dr:matiere>C</dr:matiere>
+			<dr:matiere>C++</dr:matiere>
+			<dr:matiere>Java</dr:matiere>
+			<dr:matiere>Visual Basic</dr:matiere>
+			<dr:matiere>COBOL</dr:matiere>
+			<dr:matiere>Prolog</dr:matiere>
+		</dr:connaissance>
+		<dr:connaissance>
+			<dr:domaine>Réseaux</dr:domaine>
+			<dr:matiere>Modèle OSI</dr:matiere>
+			<dr:matiere>Architecture TCP/IP</dr:matiere>
+			<dr:matiere>Sécurité</dr:matiere>
+			<dr:matiere>Sans fil</dr:matiere>
+		</dr:connaissance>
+		<dr:connaissance>
+			<dr:domaine>Technologies Internet</dr:domaine>
+			<dr:matiere>XML</dr:matiere>
+			<dr:matiere>XSLT</dr:matiere>
+			<dr:matiere>XSL-FO</dr:matiere>
+			<dr:matiere>ASP</dr:matiere>
+		</dr:connaissance>
+		<dr:connaissance>
+			<dr:domaine>EAI</dr:domaine>
+			<dr:matiere>webMethods</dr:matiere>
+			<dr:matiere>Sunopsys</dr:matiere>
+			<dr:matiere>Insevo eIntegration</dr:matiere>
+		</dr:connaissance>
+		<dr:connaissance>
+			<dr:domaine>EDI</dr:domaine>
+			<dr:matiere>Axway CFT</dr:matiere>
+			<dr:matiere>SAGE Banque Paiement 500</dr:matiere>
+		</dr:connaissance>
+		<dr:connaissance>
+			<dr:domaine>SI décisionnel</dr:domaine>
+			<dr:matiere>Oracle Warehouse Builder</dr:matiere>
+			<dr:matiere>SAP BW</dr:matiere>
+		</dr:connaissance>
+		<dr:connaissance>
+			<dr:domaine>Gestion d&apos;entreprise</dr:domaine>
+			<dr:matiere>Finance et comptabilité</dr:matiere>
+			<dr:matiere>Gestion des processus</dr:matiere>
+			<dr:matiere>Approche qualité</dr:matiere>
+			<dr:matiere>Concept d&apos;ERP</dr:matiere>
+		</dr:connaissance>
+	</dr:connaissances>
+	<dr:divers>
+		<dr:titre>Divers</dr:titre>
+		<dr:langues>
+			<dr:langue>
+				<dr:nom_langue>Français</dr:nom_langue>
+				<dr:niveau_langue>Langue maternelle</dr:niveau_langue>
+			</dr:langue>
+			<dr:langue>
+				<dr:nom_langue>Anglais</dr:nom_langue>
+				<dr:niveau_langue>Bon</dr:niveau_langue>
+			</dr:langue>
+			<dr:langue>
+				<dr:nom_langue>Espagnol</dr:nom_langue>
+				<dr:niveau_langue>Scolaire</dr:niveau_langue>
+			</dr:langue>
+		</dr:langues>
+		<dr:loisirs>
+			<dr:loisir>Lecture</dr:loisir>
+			<dr:loisir>Cinéma</dr:loisir>
+			<dr:loisir>Jeux vidéo</dr:loisir>
+			<dr:loisir>Amateur de rugby</dr:loisir>
+			<dr:loisir>Lecture</dr:loisir>
+		</dr:loisirs>
+		<dr:particularites>
+			<dr:particularite>Reconnaissance COTOREP travailleur handicapé catégorie C</dr:particularite>
+		</dr:particularites>
+	</dr:divers>
+	<dr:informations_cv>
+		<dr:information title="Script Javascript" type="script" href="sourcesxml/css/counter.js"/>
+		<dr:information title="Sources XML/XSLT du CV" show="replace" type="simple" href="sourcesxml/sources.zip">Sources XML/XSLT/XSL-FO du CV</dr:information>
+	</dr:informations_cv>
+	<dr:copyright>
+		<drc:dr_copyright>
+			<drc:date_dr_copyright>10/01/2004</drc:date_dr_copyright>
+			<drc:description_dr_copyright>&#xA9; Réalisé par David ROUSSE, d.rousse@wanadoo.fr</drc:description_dr_copyright>
+		</drc:dr_copyright>
+	</dr:copyright>
+</dr:cv>

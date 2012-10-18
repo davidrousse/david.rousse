@@ -1,0 +1,107 @@
+                               Apache Forrest 0.4
+                         Notes d'utilisation de David ROUSSE
+                         http://xml.apache.org/forrest/
+                          ============================
+
+1) Qu'est ce Forrest :
+----------------------
+Forrest est un framework de creation de site web basé sur XML.
+
+2) Pre-requis :
+---------------
+Java Runtime Environment (1.2 minimum).
+La variable JAVA_HOME créée : set JAVA_HOME=C:\j2sdk1.4.0_02
+
+3) Installer Forrest :
+----------------------
+Extraire l'archive sur le disque, par exemple dans C:\j2sdk1.4.0_02\apache-forrest-0.4-bin
+
+Créer la variable FORREST_HOME avec la valeur C:\j2sdk1.4.0_02\apache-forrest-0.4-bin
+
+Ajouter dans le PATH le contenu de %FORREST_HOME%\bin ($FORREST_HOME/bin sous Unix/Linux)
+
+4) Demmarer un projet :
+-----------------------
+Taper sous une shell la commande suivante pour vérifier si la configuration est correcte :
+forrest -projecthelp
+
+Créer un répertoire destiné à un site particulier, par exemple C:\j2sdk1.4.0_02\apache-forrest-0.4-bin\sitepersonnel 
+et ouvrir une invite de commande dans le répertoire. Ensuite taper :
+'forrest seed' pour créer la structure de base du site
+
+Ajouter tous les fichiers XML dans src\documentation\content\xdocs pour créer le site puis lancer la génération du site en tapant les commandes :
+'forrest validate' pour valider le contenu
+'forrest site' pour générer le site
+
+5) Configuration générale :
+---------------------------
+Copier sitepersonnel dans c:\j2sdk1.4.0_02\apache-forrest-0.4-bin
+Sauver C:\j2sdk1.4.0_02\apache-forrest-0.4-bin\context\sitemap.xmap et copier le sitemap.xmap personnel (il contient notamment les noms des fichiers à valider, comme download_cnrs.xml par exemple)
+De meme pour skinconf.xml (il contient les informations générales de style)
+C:\j2sdk1.4.0_02\apache-forrest-0.4-bin\context\sitemap.xmap : ajouter les liens entre schemas et  pages xml
+C:\j2sdk1.4.0_02\apache-forrest-0.4-bin\context\skins\avalon-tigris\images : placer les images à utiliser dans ce répertoire. Elles 
+seront copiées automatiquement dans C:\j2sdk1.4.0_02\apache-forrest-0.4-bin\sitepersonnel\build\site\skin\images
+
+6) Création d'une page :
+------------------------
+D'une manière classique, créer dans le répertoire C:\j2sdk1.4.0_02\apache-forrest-0.4-bin\sitepersonnel\src\documentation\content\xdocs
+le fichier .xml adéquat puis déclarer le nom de fichier dans le fichier context\sitemap.xmap
+
+7) Ajout d'une image :
+----------------------
+Copier l'image dans C:\j2sdk1.4.0_02\apache-forrest-0.4-bin\context\skins\avalon-tigris\images. 
+Supprimer si besoin les images dans <nom_site>\build\tmp\context\skins\avalon-tigris\images
+
+8) Ajout d'un lien externe :
+----------------------------
+Editer le fichier sitepersonnel\src\documentation\content\xdocs\site.xml et ajouter un element dans <external-refs/>. 
+Dans le document XML source, utiliser ensuite un element <link href="ext:root">exemple</link>.
+
+9) Ajout d'une transformation personnalisée :
+---------------------------------------------
+Ajouter dans C:\j2sdk1.4.0_02\apache-forrest-0.4-bin\context\sitemap.xmap une ligne 
+<map:when test="nomsource">
+	<map:transform src="resources/stylesheets/nomsource2document.xsl" />
+</map:when>
+et placer le fichier nomsource2document.xsl dans C:\j2sdk1.4.0_02\apache-forrest-0.4-bin\sitepersonnel\src\documentation\resources\stylesheets
+Editer ensuite C:\j2sdk1.4.0_02\apache-forrest-0.4-bin\context\skins\avalon-tigris\xslt\html\site2html.xsl
+et modifier le code pour la variable nodownload et le template site.
+
+10) Recherche d'une erreur :
+----------------------------
+Pour trouver une erreur de compilation non visible dans le log de compilation, édier le fichier
+C:\j2sdk1.4.0_02\apache-forrest-0.4-bin\sitepersonnel\build\tmp\context\WEB-INF\logs\error.log
+
+11) Modification du lien PDF :
+------------------------------
+Editer le template pdflink du fichier C:\j2sdk1.4.0_02\apache-forrest-0.4-bin\context\skins\avalon-tigris\xslt\html\site2html.xsl
+
+12) Ajout du lien Download :
+----------------------------
+Editer la variable nodownload du fichier C:\j2sdk1.4.0_02\apache-forrest-0.4-bin\context\skins\avalon-tigris\xslt\html\site2html.xsl et 
+modifier le template downloadlink
+
+13) Ajout d'un sous-répertoire :
+--------------------------------
+Créer dans src le sous-répertoire en question, par exemple subdir, puis créer dans ce répertoire un fichier index.xml.
+Editer ensuite le fichier src\site.xml et ajouter l'élement suivant :
+<subdir label="Navigation" href="subdir/">
+	<index label="Page non accessible" href="index.html"/>
+</subdir>
+
+14) Vérification des liens cassés :
+-----------------------------------
+Consulter le fichier C:\j2sdk1.4.0_02\apache-forrest-0.4-bin\sitepersonnel\build\tmp\brokenlinks.txt
+
+15) Erreurs rencontrées :
+-------------------------
+L'erreur java.lang.OutOfMemory peut être due à un fichier binaire annexe sur lequel un lien existe. 
+Au dessus de 10 Mo pour la taille du fichier, l'erreur se produit dans ma configuration
+
+16) Scripts Javascript :
+-------------------------
+Il me semble préférable de ne pas inclure le code Javascript dans un section CDATA mais plutôt de le placer 
+dans un fichier externe. Il suffit ensuite d'inclure une ligne du type 
+<script language="javascript" src="fichier.js"/> dans la feuille XSLT
+
+$Fin du fichier$

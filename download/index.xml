@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE document PUBLIC "-//APACHE//DTD Documentation V1.1//EN" "document-v11.dtd">
+<document>
+   <header>
+      <title>Site de David ROUSSE</title>
+      <authors>
+        <person name="David ROUSSE" email="d.rousse@wanadoo.fr" />
+       </authors>
+   </header>
+
+   <body>
+     <section>
+       <title>Sous répertoire du site</title>
+       <p>Oups ! L'adresse demandée n'est pas disponible.</p>
+       <p>La page d'accueil du site se situe <link href="ext:root">ici</link>.</p>
+      </section>
+   </body>
+</document>
+

@@ -1,0 +1,3 @@
+@echo off
+echo Compilation FO vers PDF ...
+java org.apache.fop.apps.Fop -fo %1.fo -pdf %1.pdf

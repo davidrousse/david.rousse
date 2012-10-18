@@ -1,0 +1,3 @@
+@echo off
+echo Transformation de %1.xml en %3.html par %2.xsl ...
+java org.apache.xalan.xslt.Process -IN %1.xml -XSL %2.xsl -OUT %3.html

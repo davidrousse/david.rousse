@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!--
+ Description : schema XML pour la validation d'un copyright
+ Auteur : David ROUSSE, d.rousse@wanadoo.fr
+ Date derniere modification : 01/02/2003
+-->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:drc="http://perso.wanadoo.fr/david.rousse/copyright/"
+           targetNamespace="http://perso.wanadoo.fr/david.rousse/copyright/"
+           elementFormDefault="qualified"
+>
+
+<!-- Definition annotation (a titre informatif) -->
+<xs:annotation>
+ <xs:documentation xml:lang="fr">
+  Schéma XML pour la validation d'un copyright, réalisé par David ROUSSE, d.rousse@wanadoo.fr.
+ </xs:documentation>
+</xs:annotation>
+
+<!-- Definition element racine -->
+<xs:element name="dr_copyright">
+ <xs:complexType>
+  <xs:sequence>
+   <xs:element ref="drc:date_dr_copyright" />
+   <xs:element ref="drc:description_dr_copyright" />
+  </xs:sequence>
+ </xs:complexType>
+</xs:element>
+
+<!-- Definition elements niveau (racine-1) -->
+<xs:element name="date_dr_copyright" type="xs:string"/>
+
+<xs:element name="description_dr_copyright" type="xs:string"/>
+
+</xs:schema>
